@@ -20,6 +20,12 @@
     "appServiceAppName": {
       "value": "lcuneo-fe-dev"
     },
+    "azureMonitorName": {
+      "value": "lcuneo-azmon-dev"
+    },
+    "appInsightsName": {
+      "value": "lcuneo-appins-dev"
+    },
     "location": {
       "value": "Brazil South"
     }

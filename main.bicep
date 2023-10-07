@@ -31,10 +31,10 @@ param appServiceAppName string = 'ie-bank-dev'
 param appServiceAPIAppName string = 'ie-bank-api-dev'
 
 @sys.description('The name of the Azure Monitor workspace')
-param azureMonitorName string = 'ie-bank-azure-monitor-dev'
-
+param azureMonitorName string
 @sys.description('The name of the Application Insights')
-param appInsightsName string = 'ie-bank-app-insights-dev'
+param appInsightsName string
+
 @sys.description('The Azure location where the resources will be deployed')
 param location string = resourceGroup().location
 @sys.description('The value for the environment variable ENV')
@@ -132,4 +132,5 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
     Application_Type: 'web'
     WorkspaceResourceId: resourceId('Microsoft.OperationalInsights/workspaces', azureMonitorName)
   }
+
 }

@@ -21,13 +21,13 @@
       "value": "lcuneo-fe-dev"
     },
     "azureMonitorName": {
-      "value": "lcuneo-azmon-dev"
+      "value": "lcuneo-am-dev"
     },
     "appInsightsName": {
-      "value": "lcuneo-appins-dev"
+      "value": "lcuneo-ai-dev"
     },
     "location": {
-      "value": "Brazil South"
+      "value": "Brazil Southeast"
     }
   }
 }

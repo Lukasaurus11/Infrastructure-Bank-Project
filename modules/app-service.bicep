@@ -21,7 +21,7 @@ var appServicePlanSkuName = (environmentType == 'prod') ? 'B1' : 'F1'
 
 resource appServicePlan 'Microsoft.Web/serverFarms@2022-03-01' = {
   name: appServicePlanName
-  location: location // Change the location (A UNIQUE ONE) -> Brazil South
+  location: location // Change the location (A UNIQUE ONE) -> Somewhere in Canada now
   sku: {
     name: appServicePlanSkuName
   }

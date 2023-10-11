@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environmentType": {
+      "value": "prod"
+    },
+    "postgreSQLServerName": {
+      "value": "lcuneo-dbsrv-uat"
+    },
+    "postgreSQLDatabaseName": {
+      "value": "lcuneo-db-uat"
+    },
+    "appServicePlanName": {
+      "value": "lcuneo-asp-uat"
+    },
+    "appServiceAPIAppName": {
+      "value": "lcuneo-be-uat"
+    },
+    "appServiceAppName": {
+      "value": "lcuneo-fe-uat"
+    },
+    "azureMonitorName": {
+      "value": "lcuneo-am-uat"
+    },
+    "appInsightsName": {
+      "value": "lcuneo-ai-uat"
+    },
+    "location": {
+      "value": "Canada Central"
+    }
+  }
+}

@@ -1,13 +1,6 @@
 name: ie-bank-infra
 
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - "parameters/**"
-      - ".github/**"
-      - "modules/**"
-      - "!scripts/**"
+on: [push, workflow_dispatch]
 
 env:
   RESOURCE_GROUP_DEV: aguadamillas_students_1
@@ -28,7 +21,7 @@ jobs:
         run: az bicep build --file ./main.bicep
 
   deploy-dev:
-    # if: github.ref == 'refs/heads/dev'
+    #   if: github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
     needs: build
     environment:
@@ -53,7 +46,6 @@ jobs:
       - name: deploy
         uses: azure/arm-deploy@v1
         with:
-          scope: resourcegroup
           subscriptionId: ${{ env.SUBSCRIPTION_ID_DEV }}
           resourceGroupName: ${{ env.RESOURCE_GROUP_DEV }}
           template: ./main.bicep
@@ -86,7 +78,6 @@ jobs:
       - name: deploy
         uses: azure/arm-deploy@v1
         with:
-          scope: resourcegroup
           subscriptionId: ${{ env.SUBSCRIPTION_ID_UAT }}
           resourceGroupName: ${{ env.RESOURCE_GROUP_UAT }}
           template: ./main.bicep

@@ -14,6 +14,7 @@ param appServiceAPIDBHostFLASK_DEBUG string
 @allowed([
   'nonprod'
   'prod'
+  'uat'
 ])
 param environmentType string
 
